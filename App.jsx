@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 
-const ADMIN_PASSWORD = "1510dreamway1510";
+const ADMIN_PASSWORD = "1510dreamway1618";
 
 export default function App() {
   const [authorized, setAuthorized] = useState(false);
