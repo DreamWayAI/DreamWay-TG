@@ -25,7 +25,7 @@ export default function App() {
 
   const generateText = async (id) => {
     const prompt = posts.find(p => p.id === id)?.prompt;
-    const res = await fetch('https://dreamway-gpt.onrender.com/generate', {
+    const res = await fetch('https://dreamway-server-production.up.railway.app/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ prompt }),
@@ -36,7 +36,7 @@ export default function App() {
 
   const publishPost = async (id) => {
     const post = posts.find(p => p.id === id);
-    const res = await fetch('https://dreamway-gpt.onrender.com/publish', {
+    const res = await fetch('https://dreamway-server-production.up.railway.app/publish', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(post),
